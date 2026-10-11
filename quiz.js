@@ -1,0 +1,13 @@
+export const labels={food:'Food & drinks',nature:'Nature',culture:'Culture',games:'Games',creative:'Make something',unusual:'Something different',shopping:'Shopping',relax:'Slow & easy'};
+export const defaultAnswers={group:'pair',duration:2,budget:2,weather:'either',area:'any',interests:[],energy:null,crowd:null};
+const option=(value,label,sub='',emoji='↗')=>({value,label,sub,emoji});
+export function quizQuestions(areas){return [
+ {key:'group',title:'Who’s coming along?',note:'Choose the group this outing needs to suit.',options:[option('solo','Just me','Solo, steady','🧍'),option('pair','Me + one','Friend, date or sibling','👯'),option('friends','A group of friends','The whole gang','🕺'),option('family','Family','Snacks and logistics included','🚌')]},
+ {key:'duration',title:'How much activity time?',note:'A maximum activity duration. Add travel time separately.',options:[option(1,'Up to 1 hour'),option(2,'Up to 2 hours'),option(3,'Up to 3 hours')]},
+ {key:'budget',title:'What’s your maximum price band?',note:'Per person, based on catalogue estimates. Transport, food and optional extras may cost more.',options:[option(0,'Free activities only'),option(1,'Under S$20'),option(2,'Up to S$50'),option(3,'Any budget')]},
+ {key:'weather',title:'Indoors or outdoors?',note:'Fully indoors is a requirement. The other choices are preferences. Indoors does not guarantee air-conditioning.',options:[option('either','Either is fine'),option('indoor','Fully indoors only'),option('mostly-indoor','Prefer indoors'),option('outdoor','Prefer outdoors')]},
+ {key:'area',title:'Any part of Singapore in mind?',note:'Optional destination preference, not your starting point. We’ll favour this area; no location permission needed.',options:[option('any','Anywhere in Singapore'),...areas.map(x=>option(x,x))]},
+ {key:'interests',multi:true,title:'What sounds good today?',note:'Choose any number. Leave “Surprise me” selected for no preference.',options:[option('any','Surprise me','Keep the possibilities open','✳'),...Object.entries(labels).map(([v,l])=>option(v,l))]},
+ {key:'energy',title:'How active do you want to be?',note:'Optional preference using catalogue estimates, not an accessibility assessment.',options:[option(null,'No preference'),option(1,'Low activity','Take it easy'),option(2,'Gentle walking','Can stroll, cannot suffer'),option(3,'Active exploring','Comfortable shoes deployed'),option(4,'Vigorous activity','Make me sweat')]},
+ {key:'crowd',title:'What atmosphere would you prefer?',note:'Optional preference. Crowds vary by day and time; these are estimates, not live queue information.',options:[option(null,'No preference'),option(1,'As quiet as possible'),option(2,'A little atmosphere'),option(3,'Lively'),option(4,'Maximum buzz')]}
+];}

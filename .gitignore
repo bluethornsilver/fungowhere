@@ -1,0 +1,24 @@
+# Publish the active app; retain local experiments and workshop materials locally.
+/*
+!/.gitignore
+!/README.md
+!/DEMO.md
+!/package.json
+!/package-lock.json
+!/index.html
+!/styles.css
+!/app.js
+!/data.js
+!/quiz.js
+!/matching.js
+!/routing.js
+!/events.js
+!/events-ui.js
+!/venue-info.js
+!/venue-photos.js
+!/build.mjs
+!/server.mjs
+!/*.test.js
+!/public/
+!/docs/
+/public/img/

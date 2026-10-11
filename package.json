@@ -1,0 +1,13 @@
+{
+  "name": "fungowhere-recreation",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node build.mjs && node server.mjs",
+    "test": "node --test matching.test.js events.test.js venue-photos.test.js",
+    "build": "node build.mjs"
+  },
+  "engines": {
+    "node": ">=22.13"
+  }
+}

@@ -8,6 +8,23 @@ import {readRoute,routeURL,cleanAnswers} from './routing.js';
 import {events,scheduledEvents} from './events.js';
 const now=new Date('2026-10-11T02:00:00Z');
 const at=(id,visitDate='2026-10-11',visitTime='10:00',duration=3,clock=now)=>hoursStatus(places.find(p=>p.id===id),{visitDate,visitTime,duration},clock);
+
+test('NParks outings respect reserve boundaries instead of surrounding 24-hour park access',()=>{
+ assert.equal(at('labrador-nature-reserve','2026-10-12','17:00').status,'fits');
+ assert.equal(at('labrador-nature-reserve','2026-10-12','17:01').status,'too-late');
+ assert.equal(at('labrador-nature-reserve','2026-10-12','20:00').status,'closed');
+ assert.equal(at('coney-island-park','2026-10-12','16:00').status,'fits');
+ assert.equal(at('coney-island-park','2026-10-12','16:01').status,'too-late');
+ assert.equal(at('punggol-waterway-park','2026-10-12','23:30').status,'fits');
+ assert.equal(at('hortpark','2026-10-12','21:01').status,'too-late');
+});
+
+test('Sungei Buloh potential flood closure excludes overlapping routes without claiming full-day closure',()=>{
+ assert.equal(at('sungei-buloh-wetland-reserve','2026-10-28','10:00').status,'unknown');
+ assert.equal(at('sungei-buloh-wetland-reserve','2026-10-28','13:00').status,'fits');
+ assert.equal(at('sungei-buloh-wetland-reserve','2026-10-27','10:00').status,'fits');
+ assert.equal(at('sungei-buloh-wetland-reserve','2026-10-12','18:30').status,'last-entry');
+});
 test('Sunday City Gallery and special-event Hell’s Museum closure never enter recommendations',()=>{
  assert.equal(at('singapore-city-gallery').status,'closed');
  assert.equal(at('hell-s-museum').status,'closed');

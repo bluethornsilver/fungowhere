@@ -33,8 +33,16 @@ Checked against official operator pages on **11 October 2026**. Full source URLs
 
 ## Limits and maintenance
 
-17 of 61 records have sourced operating schedules. The remaining 44 have no verified schedule in this module and are not recommended. This deliberately reduces available suggestions, including some activity/food categories, until their hours can be researched.
+26 of 61 records have sourced operating schedules. The remaining 35 have no verified schedule in this module and are not recommended. This deliberately reduces available suggestions, including some activity/food categories, until their hours can be researched.
 
 Published schedules do not guarantee access, available tickets, a particular exhibition or weather-safe conditions. Jurong Lakeside and Fort Canning hours cover grounds, not every facility. TreeTop Walk needs a conservative four-hour allowance; the current planner only accepts up to three hours, so it is excluded. Unknown reopening dates are never inferred.
 
 To refresh: visit each official source, check current hours and notices, update structured intervals/exceptions and the individual checked/review dates, run `npm test`, build, and publish both the GitHub change and matching hosting source. Do not extend dates without rechecking the source. Future holiday years require fresh official holiday data.
+
+## NParks expansion, checked 11 October 2026
+
+Nine additional records use current official NParks park pages: MacRitchie reserve trails, Bukit Timah Nature Reserve, Sungei Buloh, Coney Island, Punggol Waterway, East Coast Park, Labrador Nature Reserve, HortPark and Chek Jawa. Exact source URLs and scope notes are recorded in opening-hours.js. Labrador uses its reserve section's 7am–7pm hours rather than the surrounding park's 24-hour access. East Coast hours cover park access and walking only; bicycle rental is not verified. Chek Jawa's current NParks notices say 7am–7pm, superseding older 8.30am–6pm articles; part of Coastal Loop is closed and the guided tour is suspended. Only open boardwalk sections are covered; bumboats are not verified.
+
+Sungei Buloh's official flood-risk notice lists possible partial closures on 28 October, 11am–1pm. Overlapping three-hour outings are excluded pending route confirmation, labelled possible partial closure rather than closed all day. Later Nov/Dec flood dates fall outside the current review window.
+
+Still unresolved: Pasir Ris Park is officially open24hours, but no separate mangrove-boardwalk schedule was located in the park/trail pages; that specific catalogue outing stays unverified. Rail Corridor is open24hours in NParks' trail guide, while its current microsite encourages leaving before dark and lists a southern partial closure; no invented closing time is applied and that unspecific route stays excluded pending a defined daytime segment. Southern Ridges needs a defined route with its constituent trails' hours/closure status. Pulau Ubin Bike Ride still needs rental and boat service verification. These gaps do not mean all parks are closed or unverified.

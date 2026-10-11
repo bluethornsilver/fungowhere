@@ -20,7 +20,7 @@
 ## Honest answers for judges
 
 - 61 catalogue places; 47 use actual venue photography and 14 use labelled illustrations.
-- Official schedules for 17 places are checked; 44 await verification and are excluded from suggestions. Source dates and links are visible. These checks expire after 30 days and are not live status.
+- Official schedules for 26 places are checked; 35 await verification and are excluded from suggestions. Source dates and links are visible. These checks expire after 30 days and are not live status.
 - Recommendations use rules and preference scores; they do not use live weather, crowds or booking availability.
 - Five curated dated event records; only records with known session times and sessions that have not ended are suggested. External search links provide further discovery.
 - Only three venues have separately checked practical visitor details. Photo research does not verify operating hours.

@@ -54,6 +54,6 @@ Active application modules are in the project root; static assets are in `public
 
 ## Operating-hours verification
 
-Official published schedules for 17 attractions were checked on 11 October 2026. The other 44 catalogue records stay browsable in the excluded-record list or Saved, but cannot enter recommendations. See [schedule policy and sources](docs/OPENING-HOURS.md). Recommendations apply date, arrival time, last admission, full activity duration, weekday/public-holiday hours and known dated closures. Checks expire after 30 days; unsupported dates and stale schedules fail closed. These are published schedules, not live venue status or ticket availability.
+Official published schedules for 26 attractions were checked on 11 October 2026. The other 35 catalogue records stay browsable in the excluded-record list or Saved, but cannot enter recommendations. See [schedule policy and sources](docs/OPENING-HOURS.md). Recommendations apply date, arrival time, last admission, full activity duration, weekday/public-holiday hours and known dated closures. Checks expire after 30 days; unsupported dates and stale schedules fail closed. These are published schedules, not live venue status or ticket availability.
 
 The TreeTop Walk approach/return route now allows a conservative four hours based on NParks’ 3–4-hour estimate, beyond this planner’s three-hour maximum. Hell’s Museum’s adult price band is corrected to S$22, with a two-hour minimum visit.

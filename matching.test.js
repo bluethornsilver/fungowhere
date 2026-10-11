@@ -2,8 +2,9 @@ import {singaporeToday} from './events.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {places} from './data.js';
+const rankPlaces=(list,answers)=>rankAtTime(list,answers,new Date('2026-10-11T02:00:00Z'));
 import {defaultAnswers} from './quiz.js';
-import {rankPlaces,parseSaved,savedPlaces,pickAlternatives} from './matching.js';
+import {rankPlaces as rankAtTime,parseSaved,savedPlaces,pickAlternatives} from './matching.js';
 test('Every combination respects group, activity time, price ceiling and strict indoor selection',()=>{
  for(const group of ['solo','pair','friends','family'])for(const duration of [1,2,3])for(const budget of [0,1,2,3])for(const weather of ['either','indoor','mostly-indoor','outdoor']){
   const a={...defaultAnswers,group,duration,budget,weather};

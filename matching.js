@@ -1,13 +1,14 @@
-export function rankPlaces(places,a){
+import {hoursStatus} from './opening-hours.js';
+export function rankPlaces(places,a,now=new Date()){
  const interests=a.interests??(a.interest&&a.interest!=='any'?[a.interest]:[]);
- return places.filter(p=>p.groups.includes(a.group)&&p.duration<=Number(a.duration)&&p.budget<=Number(a.budget)&&(a.weather!=='indoor'||p.setting==='indoor')).map(p=>{
+ return places.filter(p=>p.groups.includes(a.group)&&p.duration<=Number(a.duration)&&p.budget<=Number(a.budget)&&(a.weather!=='indoor'||p.setting==='indoor')&&hoursStatus(p,a,now).status==='fits').map(p=>{
   const matched=interests.filter(i=>p.interests.includes(i));
   const areaMatch=a.area&&a.area!=='any'&&p.area===a.area;
   const energy=a.energy!==null&&a.energy!==undefined&&a.energy!=='';
   const crowd=a.crowd!==null&&a.crowd!==undefined&&a.crowd!=='';
   const preferredSetting=a.weather==='mostly-indoor'?'indoor':a.weather==='outdoor'?'outdoor':null;
   const reasons=[p.budget===0?'Free activity in catalogue':'Within your maximum price band',`${p.duration}h activity fits your time`];
-  const tradeoffs=[];
+  const tradeoffs=['Published hours fit the planned visit; tickets and short-notice changes are not live-checked'];
   if(matched.length)reasons.unshift('Matches '+matched.join(' + '));else if(interests.length)tradeoffs.push('Outside your selected interests');
   if(areaMatch)reasons.push('In your preferred area');else if(a.area&&a.area!=='any')tradeoffs.push('Outside your preferred area');
   if(preferredSetting&&p.setting!==preferredSetting)tradeoffs.push('Does not match your preferred setting');

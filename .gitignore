@@ -16,6 +16,7 @@
 !/events-ui.js
 !/venue-info.js
 !/venue-photos.js
+!/opening-hours.js
 !/build.mjs
 !/server.mjs
 !/*.test.js

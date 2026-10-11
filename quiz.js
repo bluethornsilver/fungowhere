@@ -1,5 +1,5 @@
 export const labels={food:'Food & drinks',nature:'Nature',culture:'Culture',games:'Games',creative:'Make something',unusual:'Something different',shopping:'Shopping',relax:'Slow & easy'};
-export const defaultAnswers={group:'pair',duration:2,budget:2,weather:'either',area:'any',interests:[],energy:null,crowd:null};
+export const defaultAnswers={group:'pair',duration:2,budget:2,weather:'either',area:'any',interests:[],energy:null,crowd:null,visitDate:null,visitTime:null};
 const option=(value,label,sub='',emoji='↗')=>({value,label,sub,emoji});
 export function quizQuestions(areas){return [
  {key:'group',title:'Who’s coming along?',note:'Choose the group this outing needs to suit.',options:[option('solo','Just me','Solo, steady','🧍'),option('pair','Me + one','Friend, date or sibling','👯'),option('friends','A group of friends','The whole gang','🕺'),option('family','Family','Snacks and logistics included','🚌')]},

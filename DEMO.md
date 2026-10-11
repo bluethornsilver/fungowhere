@@ -5,7 +5,8 @@
 1. Install Node.js 22.13 or newer. Run `npm run dev` in this folder.
 2. Open http://127.0.0.1:4173/ in your presentation browser.
 3. Keep this server terminal running. Use the same browser for Saved outings.
-4. If demonstrating curated events, select 11 October 2026. These records are dated examples, not a live feed.
+4. Set the visit date and arrival time. Closed venues, insufficient time before closing and unknown hours are excluded from recommendations.
+5. If demonstrating curated events, select 11 October 2026. These records are dated examples, not a live feed.
 
 ## Three-minute walkthrough
 
@@ -19,8 +20,9 @@
 ## Honest answers for judges
 
 - 61 catalogue places; 47 use actual venue photography and 14 use labelled illustrations.
+- Official schedules for 17 places are checked; 44 await verification and are excluded from suggestions. Source dates and links are visible. These checks expire after 30 days and are not live status.
 - Recommendations use rules and preference scores; they do not use live weather, crowds or booking availability.
-- Five curated dated event records; external search links provide further discovery.
+- Five curated dated event records; only records with known session times and sessions that have not ended are suggested. External search links provide further discovery.
 - Only three venues have separately checked practical visitor details. Photo research does not verify operating hours.
 - Saves stay in the current browser; there are no accounts or cloud sync.
 - Local preview works on this laptop. A GitHub repository is source code, not automatically a hosted website.

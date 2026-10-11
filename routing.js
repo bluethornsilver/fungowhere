@@ -1,10 +1,13 @@
 import {singaporeToday,validDate} from './events.js';
 import {defaultAnswers,labels} from './quiz.js';
+import {validTime} from './opening-hours.js';
 export function cleanAnswers(input,areas){
  const a={...defaultAnswers};
  for(const [key,values] of Object.entries({group:['solo','pair','friends','family'],duration:[1,2,3],budget:[0,1,2,3],weather:['either','indoor','mostly-indoor','outdoor'],area:['any',...areas],energy:[null,1,2,3,4],crowd:[null,1,2,3,4]})){
   const value=values.find(v=>String(v??'')===String(input[key]??''));if(value!==undefined)a[key]=value;
  }
+ a.visitDate=validDate(input.visitDate)?input.visitDate:null;
+ a.visitTime=validTime(input.visitTime)?input.visitTime:null;
  a.interests=[...new Set((Array.isArray(input.interests)?input.interests:[]).filter(v=>Object.hasOwn(labels,v)))];return a;
 }
 export function readRoute(search,areas,places){

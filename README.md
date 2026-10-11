@@ -2,6 +2,10 @@
 
 A Singapore outing finder built for a Common Ground hackathon. Match places to your company, time and budget, save ideas, compare options and find free or low-cost events.
 
+## Live demo
+
+[Open FunGoWhere](https://fungowhere-demo.bluethornsilver.chatgpt.site). The demo is public; this source repository is private.
+
 ## Run locally
 
 Requires Node.js 22.13 or newer; no external packages are required.
@@ -45,3 +49,4 @@ Photographs retain their individual reuse licences, credits and source links. Se
 ## Project structure
 
 Active application modules are in the project root; static assets are in `public/`. `build.mjs` copies these into `dist/`; `server.mjs` serves the local preview. Tests cover matching, routes, events and photograph metadata. Local experiments, rolled-back redesigns, research downloads and workshop documents are excluded from the repository.
+
